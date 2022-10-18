@@ -1,12 +1,13 @@
 <template>
-  <div class="block" v-if="showBlock" @click="stopTimer">
+  <h2>{{ chips }}</h2>
+  <div class="block" v-if="showBlock" @click="stopTimer" data-testid="come">
       Click me
   </div>
 </template>
 
 <script>
 export default {
-props: ['delay'],
+props: ['delay','chips'],
 data (){
     return{
         showBlock: false,
@@ -28,7 +29,6 @@ methods: {
     },
     stopTimer (){
       clearInterval(this.timer)
-      console.log(this.reactionTime)
       this.$emit('end', this.reactionTime)
     }
 }
