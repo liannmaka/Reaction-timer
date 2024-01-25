@@ -24,16 +24,16 @@ export default {
     }
   },
   methods:{
-   playGame (){
-     this.startGame = true
-     this.delay = 2000 + Math.random() * 5000
-     this.showResults = false
-   },
-   endGame (reactionTime){
+    playGame (){
+      this.startGame = true
+      this.delay = 2000 + Math.random() * 5000
+      this.showResults = false
+  },
+  endGame (reactionTime){
       this.score = reactionTime 
       this.startGame = false
       this.showResults = true
-   }
+  }
   }
 }
 </script>

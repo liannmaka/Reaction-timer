@@ -1,8 +1,8 @@
 <template>
-  <h2>{{ chips }}</h2>
-  <div class="block" v-if="showBlock" @click="stopTimer" data-testid="come">
-      Click me
-  </div>
+    <h2>{{ chips }}</h2>
+    <div class="block" v-if="showBlock" @click="stopTimer" data-testid="come">
+    Click me
+    </div>
 </template>
 
 <script>
@@ -23,13 +23,13 @@ mounted (){
 },
 methods: {
     startTimer (){
-      this.timer = setInterval(() => {
-          this.reactionTime += 10
-      }, 10)  
+        this.timer = setInterval(() => {
+        this.reactionTime += 10
+    }, 10)  
     },
     stopTimer (){
-      clearInterval(this.timer)
-      this.$emit('end', this.reactionTime)
+    clearInterval(this.timer)
+    this.$emit('end', this.reactionTime)
     }
 }
 }

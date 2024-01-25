@@ -4,14 +4,13 @@ import Block from "@/components/Block";
 
 describe('Block.vue', () => {
     test('render a click me div', () => {
-       const wrapper = mount(Block, {
+        const wrapper = mount(Block, {
             data(){
                 return{
                     showBlock: true
                 }
             }
-        })
-       
+        }) 
         const div = wrapper.get('[data-testid="come"]')
     
         expect(div.text()).toBe('Click me')
@@ -19,7 +18,7 @@ describe('Block.vue', () => {
     })
     
     test('Do not render a click me div', () => {
-       const wrapper = mount(Block, {
+        const wrapper = mount(Block, {
             data(){
                 return {
                     showBlock: false
@@ -33,7 +32,7 @@ describe('Block.vue', () => {
     })
     
     test('renders a reaction time', ()=> {
-      const  wrapper = mount(Block, {
+        const  wrapper = mount(Block, {
             data(){
                 return{
                     reactionTime: 0
